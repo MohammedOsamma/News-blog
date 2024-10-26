@@ -1,9 +1,14 @@
 import { DUMMY_NEWS } from "@/dummy-news";
+import { notFound } from "next/navigation";
 
 const NewsDetailPage = ({ params }) => {
   const newsSlug = params.slug;
   //Compare The newsItem Slug un Dummay Data to newsSlug which extract from Url
   const newsItem = DUMMY_NEWS.find((newsItem) => newsItem.slug === newsSlug);
+
+  if (!newsItem) {
+    notFound();
+  }
 
   return (
     <>
