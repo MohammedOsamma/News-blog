@@ -10,7 +10,7 @@ const NewsPage = async () => {
 
   return (
     <>
-      <h1>News Page</h1>
+      <h1>News Page By server </h1>
       <NewsList news={news} />
     </>
   );
